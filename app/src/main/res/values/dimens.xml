@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="size_in_two_dp">2dp</dimen>
-    <dimen name="size_in_two_hundred_dp">200dp</dimen>
+    <dimen name="size_in_one_hundred_eighteen_dp">180dp</dimen>
     <dimen name="size_in_five_dp">5dp</dimen>
+    <dimen name="size_in_eighty_five">85dp</dimen>
 </resources>

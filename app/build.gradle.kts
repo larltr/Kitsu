@@ -83,6 +83,11 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor")
 
     //Hilt
-    implementation("com.google.dagger:hilt-android:2.46") //
+    implementation("com.google.dagger:hilt-android:2.46")
     kapt("com.google.dagger:hilt-android-compiler:2.46")
+
+    //Paging 3
+    val paging_version = "3.2.1"
+
+    implementation("androidx.paging:paging-runtime-ktx:$paging_version")
 }

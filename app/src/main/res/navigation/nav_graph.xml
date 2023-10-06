@@ -9,6 +9,6 @@
         android:id="@+id/animeListFragment"
         android:name="com.angelika.kitsu.ui.fragments.MangaListFragment"
         android:label="fragment_anime_list"
-        tools:layout="@layout/fragment_anime_list" />
+        tools:layout="@layout/fragment_manga_list" />
 
 </navigation>

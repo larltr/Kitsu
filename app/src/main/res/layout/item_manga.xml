@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/materialCardView"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/size_in_two_hundred_dp"
+    android:layout_height="@dimen/size_in_one_hundred_eighteen_dp"
     android:layout_margin="@dimen/size_in_two_dp"
     app:cardCornerRadius="@dimen/size_in_five_dp">
 
@@ -23,6 +23,13 @@
         android:gravity="center"
         android:padding="@dimen/size_in_five_dp"
         android:textColor="@color/black"
+        android:textStyle="bold"
         tools:text="Centaur" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_item"
+        android:layout_width="@dimen/size_in_eighty_five"
+        android:layout_height="@dimen/size_in_eighty_five"
+        android:layout_gravity="center" />
 
 </com.google.android.material.card.MaterialCardView>
