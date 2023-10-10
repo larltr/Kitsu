@@ -1,7 +1,7 @@
 package com.angelika.kitsu.di
 
 import com.angelika.kitsu.data.remote.RetrofitClient
-import com.angelika.kitsu.data.remote.apiservice.MangaApiService
+import com.angelika.kitsu.data.remote.apiservice.KitsuApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,7 +17,7 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideMangaApiService(): MangaApiService {
+    fun provideMangaApiService(): KitsuApiService {
         return retrofitClient.mangaApi
     }
 }

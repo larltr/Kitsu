@@ -3,7 +3,7 @@ package com.angelika.kitsu.models
 import com.angelika.kitsu.models.attributes.Attributes
 import com.google.gson.annotations.SerializedName
 
-data class MangaModel(
+data class KitsuModel(
 
     @SerializedName("id")
     val id: String,

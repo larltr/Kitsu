@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/size_in_two_dp">
+    tools:context=".ui.fragments.anime.AnimeListFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_manga"
+        android:id="@+id/rv_anime"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
@@ -17,7 +17,7 @@
         tools:listitem="@layout/item_kitsu" />
 
     <ProgressBar
-        android:id="@+id/progress_bar_manga"
+        android:id="@+id/progress_bar_anime"
         android:layout_width="@dimen/size_in_one_hundred_fifteen_dp"
         android:layout_height="@dimen/size_in_one_hundred_fifteen_dp"
         android:layout_gravity="center"

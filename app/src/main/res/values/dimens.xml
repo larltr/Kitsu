@@ -4,4 +4,9 @@
     <dimen name="size_in_one_hundred_eighteen_dp">180dp</dimen>
     <dimen name="size_in_five_dp">5dp</dimen>
     <dimen name="size_in_eighty_five">85dp</dimen>
+    <dimen name="size_in_one_hundred_fifteen_dp">150dp</dimen>
+    <dimen name="size_in_sixteen">60dp</dimen>
+    <dimen name="size_in_zero">0dp</dimen>
+    <dimen name="size_in_eight_dp">8dp</dimen>
+    <dimen name="size_in_fourteen">40dp</dimen>
 </resources>

@@ -1,6 +1,6 @@
 package com.angelika.kitsu.data.remote
 
-import com.angelika.kitsu.data.remote.apiservice.MangaApiService
+import com.angelika.kitsu.data.remote.apiservice.KitsuApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -21,6 +21,6 @@ class RetrofitClient {
         .client(okHttpClient)
         .build()
 
-    val mangaApi: MangaApiService =
-        retrofit.create(MangaApiService::class.java)
+    val mangaApi: KitsuApiService =
+        retrofit.create(KitsuApiService::class.java)
 }
