@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.angelika.kitsu.ProgressTarget
+import com.angelika.kitsu.utils.ProgressTarget
 import com.angelika.kitsu.databinding.ItemKitsuBinding
 import com.angelika.kitsu.models.KitsuModel
 import com.bumptech.glide.Glide

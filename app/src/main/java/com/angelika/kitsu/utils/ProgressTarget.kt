@@ -1,4 +1,4 @@
-package com.angelika.kitsu
+package com.angelika.kitsu.utils
 
 import android.graphics.drawable.Drawable
 import android.view.View

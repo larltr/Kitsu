@@ -2,10 +2,11 @@ package com.angelika.kitsu.data.repositories
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
-import androidx.paging.liveData
 import com.angelika.kitsu.data.remote.apiservice.KitsuApiService
 import com.angelika.kitsu.data.remote.pagingsources.AnimePagingSource
 import com.angelika.kitsu.data.remote.pagingsources.MangaPagingSource
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -21,7 +22,7 @@ class KitsuRepository @Inject constructor(
         )
     ) {
         MangaPagingSource(kitsuApiService)
-    }.liveData
+    }.flow.flowOn(Dispatchers.IO)
 
     fun getAnime() = Pager(
         PagingConfig(
@@ -30,5 +31,5 @@ class KitsuRepository @Inject constructor(
         )
     ) {
         AnimePagingSource(kitsuApiService)
-    }.liveData
+    }.flow.flowOn(Dispatchers.IO)
 }
