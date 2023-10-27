@@ -15,21 +15,21 @@ class KitsuRepository @Inject constructor(
     private val kitsuApiService: KitsuApiService
 ) {
 
-    fun getManga() = Pager(
+    fun getManga(chapterCount: String) = Pager(
         PagingConfig(
             pageSize = 15,
             initialLoadSize = 15
         )
     ) {
-        MangaPagingSource(kitsuApiService)
+        MangaPagingSource(kitsuApiService, chapterCount)
     }.flow.flowOn(Dispatchers.IO)
 
-    fun getAnime() = Pager(
+    fun getAnime(season: String) = Pager(
         PagingConfig(
             pageSize = 15,
             initialLoadSize = 15
         )
     ) {
-        AnimePagingSource(kitsuApiService)
+        AnimePagingSource(kitsuApiService, season)
     }.flow.flowOn(Dispatchers.IO)
 }

@@ -9,7 +9,8 @@ import retrofit2.HttpException
 import java.io.IOException
 
 class AnimePagingSource(
-    private val animeApiService: KitsuApiService
+    private val animeApiService: KitsuApiService,
+    private val season: String = "winter"
 ) : PagingSource<Int, KitsuModel>() {
 
     override fun getRefreshKey(state: PagingState<Int, KitsuModel>): Int? {
@@ -23,7 +24,7 @@ class AnimePagingSource(
         val pageSize = params.loadSize
         val position = params.key ?: 1
         return try {
-            val response = animeApiService.fetchAnime(pageSize, position)
+            val response = animeApiService.fetchAnime(pageSize = pageSize, offset =position, season = season)
             val nextPageNumber =
                 Uri.parse(response.links.next).getQueryParameter("page[offset]")!!.toInt()
             LoadResult.Page(

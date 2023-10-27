@@ -9,4 +9,5 @@
     <dimen name="size_in_zero">0dp</dimen>
     <dimen name="size_in_eight_dp">8dp</dimen>
     <dimen name="size_in_fourteen">40dp</dimen>
+    <dimen name="size_in_twenty_five_dp">25dp</dimen>
 </resources>

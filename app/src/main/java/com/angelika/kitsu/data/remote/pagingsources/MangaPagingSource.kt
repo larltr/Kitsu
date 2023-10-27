@@ -9,7 +9,8 @@ import okio.IOException
 import retrofit2.HttpException
 
 class MangaPagingSource(
-    private val mangaApiService: KitsuApiService
+    private val mangaApiService: KitsuApiService,
+    private val chapterCount: String = "1"
 ) : PagingSource<Int, KitsuModel>() {
 
     override fun getRefreshKey(state: PagingState<Int, KitsuModel>): Int? {
@@ -23,7 +24,7 @@ class MangaPagingSource(
         val pageSize = params.loadSize
         val position = params.key ?: 1
         return try {
-            val response = mangaApiService.fetchManga(pageSize, position)
+            val response = mangaApiService.fetchManga(pageSize = pageSize, offset = position, chapterCount = chapterCount)
             val nextPageNumber =
                 Uri.parse(response.links.next).getQueryParameter("page[offset]")!!.toInt()
             LoadResult.Page(

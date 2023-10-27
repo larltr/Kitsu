@@ -20,7 +20,7 @@ class ViewPagerAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
         return when (position) {
             0 -> AnimeListFragment()
             1 -> MangaListFragment()
-            else -> throw IllegalArgumentException("lox: $position")
+            else -> throw IllegalArgumentException("p: $position")
         }
     }
 }

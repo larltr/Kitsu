@@ -6,15 +6,29 @@
     android:layout_height="match_parent"
     android:layout_margin="@dimen/size_in_two_dp">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_manga"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="3"
-        tools:context=".ui.fragments.manga.MangaListFragment"
-        tools:itemCount="15"
-        tools:listitem="@layout/item_kitsu" />
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/sv_chapter_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/size_in_twenty_five_dp"
+            android:hint="@string/input_season_auto_complete_text_view" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_manga"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            tools:context=".ui.fragments.manga.MangaListFragment"
+            tools:itemCount="15"
+            tools:listitem="@layout/item_kitsu" />
+
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/progress_bar_manga"
